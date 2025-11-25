@@ -1,0 +1,23 @@
+void task7_triangle_existence() {
+    cout << "--- Завдання 7: Перевірка існування трикутника ---\n";
+    
+    double a, b, c;
+    cout << "Введіть довжини сторін a, b, c: ";
+    cin >> a >> b >> c;
+
+    // 1. Перевірка на додатність сторін
+    bool positive_sides = (a > 0) && (b > 0) && (c > 0);
+    
+    // 2. Перевірка нерівності трикутника
+    bool condition1 = (a + b > c);
+    bool condition2 = (a + c > b);
+    bool condition3 = (b + c > a);
+    
+    // Трикутник існує, якщо всі умови виконуються
+    if (positive_sides && condition1 && condition2 && condition3) {
+        cout << "Твердження вірне: ТРИКУТНИК ІСНУЄ.\n";
+    } else {
+        cout << "Твердження невірне: ТРИКУТНИК НЕ ІСНУЄ.\n";
+    }
+    cout << "------------------------------------------\n";
+}
