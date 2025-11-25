@@ -1,0 +1,27 @@
+void task6_count_negatives() {
+    cout << "--- Завдання 6: Кількість від'ємних чисел ---\n";
+    
+    double num1, num2, num3;
+    cout << "Введіть три числа: ";
+    cin >> num1 >> num2 >> num3;
+
+    int negative_count = 0;
+
+    // Перевірка першого числа
+    if (num1 < 0) {
+        negative_count++;
+    }
+
+    // Перевірка другого числа
+    if (num2 < 0) {
+        negative_count++;
+    }
+
+    // Перевірка третього числа
+    if (num3 < 0) {
+        negative_count++;
+    }
+
+    cout << "Кількість від'ємних чисел: " << negative_count << endl;
+    cout << "------------------------------------------\n";
+}
