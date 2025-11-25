@@ -1,0 +1,53 @@
+void task2_area_by_number() {
+    cout << "--- Завдання 2: Площа фігури за номером ---\n";
+    
+    int n;
+    cout << "Введіть номер фігури (1-4): ";
+    cin >> n;
+
+    double S = 0.0;
+    const double PI = 3.141592653589793;
+
+    switch (n) {
+        case 1: { // Прямокутник (ab)
+            double a, b;
+            cout << "Введіть a та b: ";
+            cin >> a >> b;
+            S = a * b;
+            cout << "Площа прямокутника = ";
+            break;
+        }
+        case 2: { // Паралелограм (ah)
+            double a, h;
+            cout << "Введіть a та h: ";
+            cin >> a >> h;
+            S = a * h;
+            cout << "Площа паралелограма = ";
+            break;
+        }
+        case 3: { // Трапеція ((a+b)/2 * h)
+            double a, b, h;
+            cout << "Введіть a, b та h: ";
+            cin >> a >> b >> h;
+            S = (a + b) / 2.0 * h;
+            cout << "Площа трапеції = ";
+            break;
+        }
+        case 4: { // Коло (pi R^2)
+            double R;
+            cout << "Введіть R: ";
+            cin >> R;
+            S = PI * pow(R, 2.0);
+            cout << "Площа кола = ";
+            break;
+        }
+        default: {
+            cout << "Помилка: Невірний номер фігури.\n";
+            cout << "------------------------------------------\n";
+            return;
+        }
+    }
+
+    cout << S << endl;
+    cout << "------------------------------------------\n";
+}
